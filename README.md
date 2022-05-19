@@ -29,3 +29,5 @@
 
 ### 참고할 만한 사이트
 [코딩 테스트 문제 유형 비율](https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS7793635735)
+[프로그래머스 카카오 코테](https://programmers.co.kr/learn/challenges)
+[백준](https://www.acmicpc.net/)

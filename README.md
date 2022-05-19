@@ -28,6 +28,6 @@
 3. 코드에서 변수 혹은 파라미터를 선언할 때, 다시 봤을 때 이해하기 쉽도록 이름을 작성하고, 그게 부족하다면 주석을 답니다.
 
 ### 참고할 만한 사이트
-[코딩 테스트 문제 유형 비율](https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS7793635735)
-[프로그래머스 카카오 코테](https://programmers.co.kr/learn/challenges)
-[백준](https://www.acmicpc.net/)
+- [코딩 테스트 문제 유형 비율](https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS7793635735)
+- [프로그래머스 카카오 코테](https://programmers.co.kr/learn/challenges)
+- [백준](https://www.acmicpc.net/)

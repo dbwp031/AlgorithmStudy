@@ -11,7 +11,7 @@
 [백준 1303번 문제](https://www.acmicpc.net/problem/1303)를 풀면서 BFS와 DFS를 구현했고, DFS에서 구현하는데 어려움이 있었습니다.  
 [1303.py](https://github.com/dbwp031/YujeCodingTest/blob/main/%EA%B9%8A%EC%9D%B4%EC%9A%B0%EC%84%A0%ED%83%90%EC%83%89/baek_1303.py) 및 [1303-2.py](https://github.com/dbwp031/YujeCodingTest/blob/main/%EA%B9%8A%EC%9D%B4%EC%9A%B0%EC%84%A0%ED%83%90%EC%83%89/baek_1303-2.py)에 고민한 내용이 적혀있고, [1303-3-solved.py](https://github.com/dbwp031/YujeCodingTest/blob/main/%EA%B9%8A%EC%9D%B4%EC%9A%B0%EC%84%A0%ED%83%90%EC%83%89/baek_1303-3-solved.py)에 최종 정리한 내용이 작성되어 있습니다.
 
-정리의 핵심 부분은 아래와 같다. 만약 읽었는데 기억이 잘 안나거나 이해가 안되면, 문제랑 코드를 다시 보도록 하자.
+정리의 핵심 부분은 아래와 같습니다. 만약 읽었는데 기억이 잘 안나거나 이해가 안되면, 문제랑 코드를 다시 보도록 하자.
 ```
 count를 return 해주는데, 이 업데이트 된 count가 다른 dfs에 들어가게 된다.
 내가 평소에 하던 방법은 최대 count를 전역 변수에 따로 저장해주었다.

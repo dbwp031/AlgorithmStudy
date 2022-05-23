@@ -1,17 +1,20 @@
-t = int(input())
+# 이해가 잘 안돼서 알고리즘을 봤는데 "카탈란 수"라고 한다.
+# 아이디어가 재밌고, 알아두면 언젠간 한 번은 써먹을 수 있을 것 같다.
+# https://suhak.tistory.com/77
 
+import sys
+input = sys.stdin.readline
+t = int(input())
+MAX = int(1000000007)
 for _ in range(t):
     n = int(input())
-    dp = [1 for _ in range(n+1)]
-    dp[0]=0
-    for i in range(n+1):
-        if i %2 ==1:
-            dp[i]=0
-    for i in range(1,n+1):
-        if i % 2 ==0:
-            if dp[i-2]-1 >=0:
-                dp[i]+=dp[i-2] + (dp[i-2]-1)*2
-            else:
-                dp[i]+=dp[i-2]
-    # print(*dp)
-    print(dp[-1])
+    if n%2==1:
+        print(0)
+        continue
+    dp = [0]*2501
+    dp[0]=1
+    
+    for i in range(1,n//2+1):
+        for j in range(0,i):
+            dp[i]+=(dp[j]*dp[i-1-j])%MAX
+    print(dp[n//2]%MAX)

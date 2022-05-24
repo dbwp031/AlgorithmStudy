@@ -47,3 +47,4 @@
 ```
 ### 참고할 만한 사이트
 [웃긴 그리디 설명 블로그](https://blog.encrypted.gg/975?category=773649)
+[그리디 문제집](https://www.acmicpc.net/workbook/view/4380)

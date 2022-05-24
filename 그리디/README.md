@@ -25,7 +25,7 @@
 이고, 이 커버하지 않는 거리는 k-1개임을 알 수 있다. 그러면 "집중소 커버 거리 합"이 최소가 되기 위해선 커버하지 않는 거리가 최대가 되면 되고, 그렇다면 노드 사이의 거리들 중
 가장 긴 k-1개의 거리의 합을 커버하지 않으면 된다는 것을 알 수 있다. 
 ```
-<img src="https://user-images.githubusercontent.com/65337423/169980607-18b7f814-d816-405d-a5df-8453680fab86.png" width="350" height="350">
+<img src="https://user-images.githubusercontent.com/65337423/169980607-18b7f814-d816-405d-a5df-8453680fab86.png" height="200">
 
 - [동전0](https://github.com/dbwp031/YujeCodingTest/blob/main/%EA%B7%B8%EB%A6%AC%EB%94%94/baek_11047.py)
 ```

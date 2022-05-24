@@ -23,7 +23,7 @@
 나에게 10원,50원,100원,500원이 있을 때, 가장 높은 동전부터 최대한 많이써야 최소한의 동전을 사용할 수 있을 것이다.
 => 사실은 하위의 동전들은 상위 동전을의 약수여야만 가능.
 ```
-- [회의실 배정](https://github.com/dbwp031/YujeCodingTest/blob/main/%EA%B7%B8%EB%A6%AC%EB%94%94/baek_1931.py)
+- [회의실 배정 [task scheduling problem]](https://github.com/dbwp031/YujeCodingTest/blob/main/%EA%B7%B8%EB%A6%AC%EB%94%94/baek_1931.py)
 ```
 처음엔 dp로 구현하려다 시간 최대값을 보고 메모리 초과로 판단해서 그리디로 선회했다.
 끝나는 시간이 이른 회의부터 선택을 한다. 그러면 일찍 마치는 회의부터 선택할 수 있다.

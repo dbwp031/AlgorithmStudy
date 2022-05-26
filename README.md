@@ -2,7 +2,7 @@
 코딩 테스트를 위한 주제별 정리 레포입니다.
 ### My Spec
 [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=dbwp031)](https://solved.ac/dbwp031/)
-
+- ~~김준영 컽~~ (2022.05.26)
 ## 레포 사용 방법
 언어는 Python으로 통일합니다. (C++은 사용하게 된다면 새로운 레포 사용)
 ### 주제별 내용

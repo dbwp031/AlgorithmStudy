@@ -1,6 +1,6 @@
 # 구현
 ## 재귀
-- [⭐홀수 홀릭 호석](https://github.com/dbwp031/YujeCodingTest/blob/main/%EA%B7%B8%EB%A6%AC%EB%94%94/baek_21064.py)
+- [⭐홀수 홀릭 호석](https://github.com/dbwp031/YujeCodingTest/blob/main/%EA%B5%AC%ED%98%84/baek_20164.py)
 ```
 재귀 함수에서 return을 쓴다는 것: 그 위치에서 끝내겠다는 것 + 반환해야 할 것이 있다는 것
 => 즉 최종 완성물의 결괏값(return 값)을 사용해 상위 함수에서 사용해야 하는 것.

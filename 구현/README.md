@@ -26,7 +26,7 @@ f() + 문자열
 을 해주면 됩니다.
 ```
 
-### in 함수에 대하여
+## in 함수에 대하여
 - [마법사 상어와 비바라기](https://github.com/dbwp031/YujeCodingTest/blob/main/%EA%B5%AC%ED%98%84/baek_21610.ipynb)
 ```
 in 함수는 복잡도가 O(N)으로, 구현문제에서도 이로 인해 시간초과가 발생할 수 있습니다.

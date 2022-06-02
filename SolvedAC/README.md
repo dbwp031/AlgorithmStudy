@@ -10,4 +10,4 @@
 
 [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=shyne2496)](https://solved.ac/shyne2496/)
 
-[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=yoy0730)](https://solved.ac/yoy0730/)
+[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=yoy07030)](https://solved.ac/yoy07030/)

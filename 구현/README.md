@@ -32,3 +32,18 @@ f() + 문자열
 in 함수는 복잡도가 O(N)으로, 구현문제에서도 이로 인해 시간초과가 발생할 수 있습니다.
 만약에 가능한 경우의 수가 한정되어 있고, 메모리상 구현이 가능하다면 visited 배열을 만들어 복잡도를 O(1)로 줄일 수 있습니다.
 ```
+## 구현 & 시뮬레이션에서의 TIP
+-[마법사 상어와 파이어볼]()
+1. "0이 되면 지워진다."와 같은 표현이 있으면, 실제로 지울 것  
+2. 모두 짝수 or 홀수인지 파악하는 것은 allEven 이라는 bool타입변수를 선언하고, odd가 나오면 allEven=False로 값 할당
+```
+if mess!=0:
+    if allOdd or allEven:
+        for g in range(4):
+            new_board[i][j].append([mess,speed,allS[g]])
+    else:
+        for g in range(4):
+            new_board[i][j].append([mess,speed,allD[g]])
+else:
+new_board[i][j]=board[i][j]
+```

@@ -37,13 +37,11 @@ in 함수는 복잡도가 O(N)으로, 구현문제에서도 이로 인해 시간
 1. "0이 되면 지워진다."와 같은 표현이 있으면, 실제로 지울 것  
 2. 모두 짝수 or 홀수인지 파악하는 것은 allEven 이라는 bool타입변수를 선언하고, odd가 나오면 allEven=False로 값 할당
 ```
-if mess!=0:
-    if allOdd or allEven:
-        for g in range(4):
-            new_board[i][j].append([mess,speed,allS[g]])
-    else:
-        for g in range(4):
-            new_board[i][j].append([mess,speed,allD[g]])
-else:
-new_board[i][j]=board[i][j]
+allOdd = True
+allEven = True
+if len(board[i][j])>=2:
+    for h in range(len(board[i][j])):
+        ...
+        if d % 2 == 0: allOdd = False
+        else: allEven = False
 ```

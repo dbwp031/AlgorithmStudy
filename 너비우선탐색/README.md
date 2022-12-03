@@ -2,7 +2,7 @@
 [DFS BFS 필수 문제](https://www.acmicpc.net/workbook/view/1983)
 
 
-### 기본적인 구현 [문제]()
+### 기본적인 구현 [문제](https://leetcode.com/problems/island-perimeter/)
 ```           
 # bfs
 count = 0

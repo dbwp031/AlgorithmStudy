@@ -33,3 +33,6 @@
 - [백준](https://www.acmicpc.net/)
 - [문제 추천 블로그(이 블로그의 추천 문제를 우선적으로 풀었습니다.)](https://covenant.tistory.com/224)
 - [백준 추천 문제](https://github.com/tony9402/baekjoon)
+
+![image](https://github.com/dbwp031/YujeCodingTest/assets/65337423/34a0ebce-8e38-4c5a-acec-c0450daf84c0)
+[링크](https://www.youtube.com/watch?v=OhSlSl_C2OM&t=974s)

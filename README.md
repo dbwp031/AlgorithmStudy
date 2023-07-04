@@ -4,7 +4,7 @@
 [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=dbwp031)](https://solved.ac/dbwp031/)
 - ~~김준영 컽~~ (2022.05.26)
 ## 레포 사용 방법
-언어는 Python으로 통일합니다. (C++은 사용하게 된다면 새로운 레포 사용)
+언어: Java, Python
 ### 주제별 내용
 1. 주제에 대한 설명 (나중에 다시 봤을 때 이해할 수 있게 정리합니다.)
 2. 공부하면서 어려웠던 점, 헷갈렸던 점을 작성합니다. (다시 봤을 때 무조건 헷갈립니다.)

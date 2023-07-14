@@ -27,29 +27,33 @@ public class Main {
     static int v,e,k;
     static List<Node>[] list;
     static int[] dist;
+
     public static void main(String[] args) throws Exception {
         StringTokenizer st = new StringTokenizer(br.readLine());
         v = Integer.parseInt(st.nextToken());
         e = Integer.parseInt(st.nextToken());
-        k = Integer.parseInt(st.nextToken());
+        k = Integer.parseInt(br.readLine());
         list = new ArrayList[v + 1]; // list[i] = i번째 vertex와 연결되어 있는 edge의 도착 vertaex정보와 edge의 weight
 
         dist = new int[v + 1]; // 특정 vertex로부터 각 노드까지의 도착점
 
         Arrays.fill(dist, INF);
-
-        for (int i = 1; i <= v; i++) {
+        for (int i = 1; i < v + 1; i++) {
+            list[i] = new ArrayList<>();
+        }
+        for (int i = 1; i < e+1; i++) {
             st = new StringTokenizer(br.readLine());
             int start=Integer.parseInt(st.nextToken());
             int end=Integer.parseInt(st.nextToken());
             int weight=Integer.parseInt(st.nextToken());
             list[start].add(new Node(end, weight));
+
         }
         StringBuilder sb = new StringBuilder();
         dikstra(k);
         for (int i = 1; i <= v; i++) {
             if(dist[i]==INF) sb.append("INF\n");
-            else sb.append(dist[i] + '\n');
+            else sb.append(dist[i] + "\n");
         }
         bw.write(sb.toString());
         bw.close();

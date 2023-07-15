@@ -106,10 +106,11 @@ public class Main {
         if(a<b) parent[b] = a;
         else parent[a]=b;
     }
-
     private static int find_parent(int a) {
-        if(parent[a]!=a) parent[a]= find_parent(parent[a]);
-        else return a;
+        if (parent[a] != a) {
+            parent[a] = find_parent(parent[a]);
+        }
+        return parent[a];
     }
 }
 ```
@@ -124,7 +125,9 @@ public class Main {
 ### 버전 2. 최상위 부모만 알면 될 때
 ```java
     private static int find_parent(int a) {
-        if(parent[a]!=a) parent[a]= find_parent(parent[a]);
-        else return a;
+        if (parent[a] != a) {
+            parent[a] = find_parent(parent[a]);
+        }
+        return parent[a];
     }
 ```

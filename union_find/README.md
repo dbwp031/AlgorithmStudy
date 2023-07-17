@@ -131,3 +131,66 @@ public class Main {
         return parent[a];
     }
 ```
+
+## 문제
+### 12865번 문제
+union_find를 할 때, 같은 그룹에 관련된 weight와 value를 union할 때마다 업데이트해주어야 했다. 이때 parent table을 2차원 배열로해서 저장할 수 있도록 했다.
+```java
+package baek20303_third;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.StringTokenizer;
+
+public class Main {
+    static int n,m,k;
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    static int[][] parent;
+    public static void main(String[] args) throws IOException {
+        ...
+        parent = new int[3][n+1];
+        for (int i = 1; i < n + 1; i++) {
+            parent[0][i]=i;
+        }
+        st = new StringTokenizer(br.readLine());
+        for (int i = 1; i < n + 1; i++) {
+            parent[1][i] = Integer.parseInt(st.nextToken());
+            parent[2][i] = 1;
+        }
+        for (int i = 0; i < m; i++) {
+            st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            union_parent(a, b);
+        }
+
+    private static void union_parent(int a, int b) {
+        a = find_parent(a);
+        b = find_parent(b);
+        if (a < b) {
+            parent[0][b] = a;
+            parent[1][a]+= parent[1][b];
+            parent[2][a]+= parent[2][b];
+        } else if (a>b) {
+            parent[0][a] = b;
+            parent[1][b]+= parent[1][a];
+            parent[2][b]+= parent[2][a];
+
+        } else {
+            parent[0][a] = b;
+        }
+    }
+
+    private static int find_parent(int a) {
+        if(parent[0][a]==a) return a;
+        parent[0][a] = find_parent(parent[0][a]);
+        return parent[0][a];
+    }
+}
+
+```

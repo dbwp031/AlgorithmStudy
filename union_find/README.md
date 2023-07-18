@@ -194,3 +194,6 @@ public class Main {
 }
 
 ```
+### 1043 문제
+* HashSet을 사용하면, find를 O(1)로 할 수 있다.
+* visited array를 사용해서 무한 루프를 막을 수 있다. [블로그 참고](https://velog.io/@yanghl98/%EB%B0%B1%EC%A4%80-1043-%EA%B1%B0%EC%A7%93%EB%A7%90-JAVA%EC%9E%90%EB%B0%94)

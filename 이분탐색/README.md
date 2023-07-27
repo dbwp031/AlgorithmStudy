@@ -167,3 +167,5 @@ public class Main {
     }
 }
 ```
+### upper bound는 표준 라이브러리가 없다.
+공부해서 구현해서 써라.

@@ -51,6 +51,8 @@ public class Main {
 ```
 
 ## 표준 라이브러리 사용
+`Arrays.binarysearch()`같은 경우에 target이 있을 경우 해당 인덱스를, 없을 경우 -(low+1)을 리턴한다. 즉 `0 미만: 못찾음, 0이상: 찾음` 이라고 받아드릴 수 있다. 
+
 ```java
 package baek1920;
 
@@ -77,25 +79,7 @@ public class Main {
         for (int i = 0; i < m; i++) {
             int result = Arrays.binarySearch(data, 1, n + 1, Integer.parseInt(st.nextToken()));
             System.out.println(result > 0 ? 1 : 0);
-
         }
-
-    }
-
-    private static int binarySearch(int target) {
-        int st = 1;
-        int en = n;
-        while (st <= en) {
-            int mid = (st + en) / 2;
-            if (target > data[mid]) {
-                st = mid+1;
-            } else if (target < data[mid]) {
-                en = mid - 1;
-            } else {
-                return 1;
-            }
-        }
-        return 0;
     }
 }
 ```

@@ -1,39 +1,61 @@
-n = int(input())
-k = int(input()) # 사과 개수
-apples = []
-for _ in range(k):
-    a,b = map(int,input().split())
-    apples.append([a-1,b-1])
-l = int(input())
-moves = []
-for _ in range(l):
-    a,b = input().split()
-    moves.append([int(a),b])
+N = int(input())
+K = int(input())
 
-time = 0
-# 위 오 아 왼
-dx = [-1,0,1,0]
-dy = [0,1,0,-1]
-d = 1
-# D: +1 / L:-1
-snake = [[0,0]]
-m = 0
-while True:
-    if m<len(moves) and time == moves[m][0]:
-        if moves[m][1] == 'D':
-            d = (d+1)%4
-        else:
-            d = (d-1)%4
-        m+=1
-    x,y = snake[0]
-    nx,ny = x+dx[d],y+dy[d]
-    time+=1
-    if ([nx,ny] in snake) or not (0<=nx<=n-1) or not (0<=ny<=n-1):
-        # print(nx,ny)
+EMPTY = 0
+APPLE = 1
+
+board = [[EMPTY for _ in range(N)] for _ in range(N)]
+
+for _ in range(K):
+    i,j = map(int, input().split())
+    board[i-1][j-1] = APPLE
+
+L = int(input())
+orders = []
+for _ in range(L):
+    sec, dir = input().split()
+    sec = int(sec)
+    orders.append([sec, dir])
+# 오, 위, 왼, 아
+dx = [0,1,0,-1]
+dy = [1,0,-1,0]
+d = 0
+
+q = []
+q.append([0,0])
+
+oi = 0
+answer = 0
+while q:
+    answer +=1
+    hx, hy = q[0]
+    nx = hx + dx[d]
+    ny = hy + dy[d]
+
+    if not (0 <= nx < N and 0 <= ny <N):
         break
-    snake = [[nx,ny]] + snake
-    if  not ([nx,ny]  in apples):
-        snake.pop(-1)
-    else:
-        apples.remove([nx,ny])
-print(time)
+    
+    crash = False
+    for i in range(0, len(q)):
+        bx, by = q[i]
+        if bx == nx and by == ny:
+            crash = True
+            break
+    if crash:
+        break
+
+    q.insert(0, [nx, ny])
+    if board[nx][ny] == EMPTY:
+        q.pop(len(q)-1)
+    elif board[nx][ny] == APPLE:
+        board[nx][ny] = EMPTY
+
+    if oi < len(orders) and answer == orders[oi][0]:
+        mo = orders[oi][1]
+        if mo == "D":
+            d = (d + 1) % 4
+        else:
+            d = (d - 1) % 4
+        oi += 1
+
+print(answer)

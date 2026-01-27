@@ -1,24 +1,24 @@
-import collections
+import sys
+from collections import deque
+input = sys.stdin.readline
 
 n,w,L = map(int,input().split())
-cars = list(map(int,input().split()))
+cars = deque(map(int, input().split())) # car를 뽑아서 쓸꺼라 deque로
 
-q = collections.deque()
+bridge = deque([0]*w)
+cur = 0 # 무게
+sec = 0
 
-car_idx = 1
-q.extend([0]*(w-1) + [cars[0]])
+while cars or cur > 0:
+    sec += 1
+    out = bridge.popleft()
+    cur -= out
 
-sec = 1
+    if cars and cur + cars[0] <= L:
+        x = cars.popleft()
+        bridge.append(x)
+        cur += x
+    else:
+        bridge.append(0)
 
-while q:
-    # print(q)
-    sec +=1
-    node = q.popleft()
-
-    if car_idx < len(cars):
-        if sum(q) + cars[car_idx] <= L:
-            q.append(cars[car_idx])
-            car_idx +=1
-        else:
-            q.append(0)    
 print(sec)

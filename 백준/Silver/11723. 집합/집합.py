@@ -1,31 +1,24 @@
 import sys
 input = sys.stdin.readline
-S = [0] * (21)
-def solve(op, num):
-    if op == "add":
-        S[num] = 1
-    elif op == "remove":
-        S[num] = 0
-    elif op == "check":
-        print(S[num]) 
-    elif op == "toggle":
-        if S[num] == 0:
-            S[num] = 1
-        else:
-            S[num] = 0
-    elif op == "all":
-        for i in range(1,21):
-            S[i] = 1
-    elif op == "empty":
-        for i in range(1,21):
-            S[i] = 0
 
-
-M = int(input())
-for _ in range(M):
+state = 0
+m = int(input())
+for _ in range(m):
     ops = input().split()
     op = ops[0]
-    num = "-"
-    if len(ops) == 2:
-        num = int(ops[1])
-    solve(op, num)    
+    if op == "add":
+        x = int(ops[1])
+        state |= (1 << (x-1))
+    elif op == "remove":
+        x = int(ops[1])
+        state &= (~(1<<(x-1)))
+    elif op == "check":
+        x = int(ops[1])
+        print((state >> (x-1)) & 1)
+    elif op == "toggle":
+        x = int(ops[1])
+        state ^= (1<<(x-1))
+    elif op == "all":
+        state = (1 << 20) - 1
+    elif op == "empty":
+        state = 0

@@ -1,13 +1,13 @@
+import sys
+input = sys.stdin.readline
+
 n = int(input())
-nums = list(map(int,input().split()))
+nums = [0] + list(map(int,input().split()))
+dp = [0] * (n+1)
+for i, num in enumerate(nums):
+    if i == 0:
+        continue
+    dp[i] = max(dp[i-1], 0) + num
 
-dp = [0] * len(nums)
-if n == 1:
-    print(nums[0])
-    exit()
-    
-dp[0] = nums[0]
-for i in range(1, len(nums)):
-    dp[i] = max(dp[i-1] + nums[i], nums[i])
-
-print(max(dp))
+# print(dp[1:])
+print(max(dp[1:]))

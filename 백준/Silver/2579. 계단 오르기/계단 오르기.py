@@ -1,23 +1,25 @@
+import sys
+input = sys.stdin.readline
+
 n = int(input())
-s = []
+stairs = []
 for _ in range(n):
-    s.append(int(input()))
+    stairs.append(int(input()))
 
-if n == 1:
-    print(s[0])
-    exit()
-elif n == 2:
-    print(s[0] + s[1])
-    exit()
-elif n == 3:
-    print(max(s[0]+s[2], s[1]+s[2]))
-    exit()
+dp = [0] * 300
 
-dp = [0]*n 
-dp[0] = s[0]
-dp[1] = s[0] + s[1]
-dp[2] = max(s[0]+s[2], s[1]+s[2])
+dp[0]= stairs[0]
+if n >= 2:
+    dp[1] = stairs[0] + stairs[1]
+if n >= 3:
+    dp[2] = max(stairs[0] + stairs[2], stairs[1] + stairs[2])
 
+# dp[i] = i번째 계단을 오를 때의 최댓값
 for i in range(3, n):
-    dp[i] = max(dp[i-2], dp[i-3] + s[i-1]) + s[i]
-print(dp[-1])
+    dp[i] = max(dp[i-2] + stairs[i],
+                dp[i-3] + stairs[i-1] + stairs[i])
+
+# print(dp[:20])
+if n == 0:
+    print(dp[0])
+print(dp[n-1])
